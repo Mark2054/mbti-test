@@ -9,7 +9,7 @@ public class IntervalMerger {
 		
 		// Step 0: Make sure the list isn't empty
 		if (intervals.isEmpty()) {
-			throw new IllegalArgumentException("The list should was empty.");
+			throw new IllegalArgumentException("The list was empty.");
 		}
 		
 		// Step 1: Sort the list

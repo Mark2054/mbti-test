@@ -59,3 +59,17 @@ startApplication [1,2] [15,4] [-8,12] [3,6]
 Alternative 3:
 Zu guter letzt kann auch statt den Intervallen ein Dateipfad angegeben werden. In der Datei müssten die Intervalle dann nach dem üblichen Schema in einer Zeile stehen. Das sähe dann so aus:
 startApplication "D:\ExampleFile.dat"
+
+# Robustheit
+
+Fehlerhafte Intervalle werden aktuell ignoriert, das Programm wird aber weiter ausgeführt (auch, wenn es durchaus ausgibt, welche Intervalle fehlerhaft waren). Vertauschte Grenzen werden einfach umgedreht.
+Beim Lesen von Dateien wird nur die erste Zeile überhaupt bearbeitet, da könnte also alles Mögliche zusätzlich drinnen stehen, ohne die Ausführung zu behindern, allerdings würden auch zusätzliche Intervalle in Folgezeilen ignoriert werden. 
+Bei der Ausführung spielt es keine Rolle, wie viele Parameter man angibt, in jedem Fall wird versucht, etwas Sinnvolles damit zu tun.
+
+# Bearbeitungszeit
+
+Ganz genau kann ich die Frage leider nicht beantworten, da ich die Aufgabe mehr als einen Tag, bevor ich mit ihr angefangen habe, gelesen habe und dann immer mal wieder während Wartezeiten und Busfahrten darüber nachgedacht habe (was in gewisser Weise dazu zählen sollte, aber schwierig in vernünftige Zeiten einzuteilen ist). 
+Vom wirklich hinsetzen und aktiv an der Aufgabe arbeiten bis zu dem Punkt, an dem ich aufgehört habe, daran zu arbeiten, waren es um die 4 Stunden. 
+Dann sind nochmal etwa 10-20 Minuten im Nachhinein dazugekommen, als mir dann eine Kleinigkeit oder zwei eingefallen sind, die ich noch geändert habe und als ich noch ein, zwei Worte zur Robustheit und Bearbeitungszeit geschrieben habe. 
+
+Ingesamt also ca 4-5 Stunden.

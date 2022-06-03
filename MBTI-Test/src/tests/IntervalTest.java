@@ -48,6 +48,7 @@ class IntervalTest {
 		assertFalse(Interval.isInterval("[a,2]"));
 		assertFalse(Interval.isInterval("1,2]"));
 		assertFalse(Interval.isInterval("[1,2"));
+		assertFalse(Interval.isInterval("1,2"));
 		assertTrue(Interval.isInterval("[1,2]"));
 		assertTrue(Interval.isInterval("[2,1]"));
 		assertTrue(Interval.isInterval("[-14124,235654]"));

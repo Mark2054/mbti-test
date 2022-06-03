@@ -87,6 +87,23 @@ public class ApplicationStarter {
 	}
 	
 	/**
+	 * Prompts the user to input a list of intervals and then returns that as an actual list of interval objects.
+	 * @return The list of valid intervals read from the given input.
+	 */
+	private static List<Interval> inputIntervals() {		
+		System.out.println("You may add intervals by writing: [a,b] [c,d] [e,f] ...");
+		System.out.println("x and y have to be integer values.");
+		System.out.println();
+		System.out.print("Add Interval: ");
+		
+		Scanner scanner = new Scanner(System.in);
+		String[] intervalStrings = scanner.nextLine().split(" ");
+		scanner.close();
+				
+		return createIntervalList(intervalStrings);
+	}
+	
+	/**
 	 * Reads a single line filled with intervals from the given file and turns them into a list of intervals.
 	 * @param path The path to the file.
 	 * @return The list of valid intervals read from the given file.
@@ -107,22 +124,5 @@ public class ApplicationStarter {
 		}
 		
 		return intervals;		
-	}
-	
-	/**
-	 * Prompts the user to input a list of intervals and then returns that as an actual list of interval objects.
-	 * @return The list of valid intervals read from the given input.
-	 */
-	private static List<Interval> inputIntervals() {		
-		System.out.println("You may add intervals by writing: [a,b] [c,d] [e,f] ...");
-		System.out.println("x and y have to be integer values.");
-		System.out.println();
-		System.out.print("Add Interval: ");
-		
-		Scanner scanner = new Scanner(System.in);
-		String[] intervalStrings = scanner.nextLine().split(" ");
-		scanner.close();
-				
-		return createIntervalList(intervalStrings);
 	}
 }
